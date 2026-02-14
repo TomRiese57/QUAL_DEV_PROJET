@@ -1,8 +1,19 @@
 # QUAL_DEV_PROJET
 
-## Execution des tests avec les scripts suivant
+## Gestion d'une tâches
 
-```
-deno test test/BiblioTest.ts
-deno test test/TodoListTest.ts
-```
+Le projet gère une liste de tâche 
+
+Fonctionalité :
+- Ajouter une tâche
+- Lister une tâche
+- Marquer une tâche comme terminée
+
+## Mini gestion de bibliothèque
+
+Le projet gère une mini bibliothèque
+
+Fonctionalité :
+- Ajouter un livre
+- Lister les livres
+- Rechercher un livre par titre

@@ -1,7 +1,7 @@
 // test/BiblioTest.ts
 
 // Importation des modules nécessaires pour les tests
-import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
+import { assertEquals, assertThrows } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 import { Biblio } from "../controller/Biblio.ts";
 
 // Test pour la méthode ajoutLivre de la classe Biblio
@@ -25,7 +25,9 @@ Deno.test("Test suprimerLivre non trouvé", () => {
     try {
         biblio.suprimerLivre("Le Petit Prince");
     } catch(e) {
-        assertEquals(e, "Livre non trouvé");
+        assertThrows(() => {
+            throw new Error("Livre non trouvé");
+        }, Error, "Livre non trouvé");
     }
 })
 

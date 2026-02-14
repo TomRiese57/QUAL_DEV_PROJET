@@ -23,7 +23,6 @@ export class TodoList {
         else{
             throw new Error("Tâche non trouvée");
         }
-        
     }
 
     // Marquer une tâche comme terminée

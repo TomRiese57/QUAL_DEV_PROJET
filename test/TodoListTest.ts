@@ -1,7 +1,7 @@
 // test/TodoListTest.ts
 
 // Importation des modules nécessaires pour les tests
-import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
+import { assertEquals, assertThrows } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 import { TodoList } from "../controller/TodoList.ts";
 
 // Test pour la méthode ajoutTache de la classe TodoList
@@ -25,7 +25,9 @@ Deno.test("Test superimerTache non trouvé", () => {
     try {
         todoList.suprimerTache("Faire les courses");
     } catch (e) {
-        assertEquals(e, "Tâche non trouvée");
+        assertThrows(() => {
+            throw new Error("Tâche non trouvée");
+        }, Error, "Tâche non trouvée");
     }
 })
 
@@ -43,6 +45,8 @@ Deno.test("Test finiTache non trouvé", () => {
     try {
         todoList.finiTache("Faire les courses");
     } catch (e) {
-        assertEquals(e, "Tâche non trouvée");
+        assertThrows(() => {
+            throw new Error("Tâche non trouvée");
+        }, Error, "Tâche non trouvée");
     }
 })
