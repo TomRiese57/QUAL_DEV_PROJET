@@ -1,6 +1,6 @@
 ## Lien de dépot
 
-https://github.com/RomainSabat/eval_maintenance_applicative.git
+https://github.com/TomRiese57/QUAL_DEV_PROJET
 
 ## Langage utilisé
 
