@@ -1,6 +1,6 @@
 # QUAL_DEV_PROJET
 
-## Gestion d'une tâches
+## Gestion de tâches
 
 Le projet gère une liste de tâche 
 
