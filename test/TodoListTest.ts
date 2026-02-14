@@ -25,9 +25,7 @@ Deno.test("Test superimerTache non trouvé", () => {
     try {
         todoList.suprimerTache("Faire les courses");
     } catch (e) {
-        assertThrows(() => {
-            throw new Error("Tâche non trouvée");
-        }, Error, "Tâche non trouvée");
+        assertEquals(e instanceof Error, true);
     }
 })
 
@@ -45,8 +43,6 @@ Deno.test("Test finiTache non trouvé", () => {
     try {
         todoList.finiTache("Faire les courses");
     } catch (e) {
-        assertThrows(() => {
-            throw new Error("Tâche non trouvée");
-        }, Error, "Tâche non trouvée");
+        assertEquals(e instanceof Error, true);
     }
 })

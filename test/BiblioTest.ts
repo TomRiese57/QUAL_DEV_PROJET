@@ -25,9 +25,7 @@ Deno.test("Test suprimerLivre non trouvé", () => {
     try {
         biblio.suprimerLivre("Le Petit Prince");
     } catch(e) {
-        assertThrows(() => {
-            throw new Error("Livre non trouvé");
-        }, Error, "Livre non trouvé");
+        assertEquals(e instanceof Error, true);
     }
 })
 
